@@ -19,18 +19,15 @@ var Sketch = (function() {
   var drawTouch = function(event) {
     var touch = event.touches[0];
 
-    if (lastX === undefined) lastX = touch.offsetX;
-    if (lastY === undefined) lastY = touch.offsetY;
+    if (lastX === undefined) lastX = touch.clientX;
+    if (lastY === undefined) lastY = touch.clientY;
 
     context2d.moveTo(lastX, lastY);
-    context2d.lineTo(touch.offsetX, touch.offsetY);
+    context2d.lineTo(touch.clientX, touch.clientY);
     context2d.stroke();
 
-    lastX = touch.offsetX;
-    lastY = touch.offsetY;
-
-    console.log(touch);
-    console.log(touch.offsetX);
+    lastX = touch.clientX;
+    lastY = touch.clientY;
   };
   
   return {
