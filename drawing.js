@@ -28,6 +28,8 @@ var Sketch = (function() {
 
     lastX = touch.offsetX;
     lastY = touch.offsetY;
+
+    console.log(lastX);
   };
   
   return {
