@@ -41,6 +41,8 @@ var Sketch = (function() {
 
       canvas.onmousemove = draw;
       canvas.ontouchmove = drawTouch;
+
+      document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
     }
   };
 })();
