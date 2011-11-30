@@ -30,6 +30,7 @@ var Sketch = (function() {
     lastY = touch.offsetY;
 
     console.log(event);
+    console.log(touch.offsetX);
   };
   
   return {
